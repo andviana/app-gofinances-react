@@ -9,12 +9,19 @@ export const Container = styled.div<ContainerProps>`
   padding: 30px 0;
 
   header {
-    width: 1120px;
+    /* width: 1120px; */
     margin: 0 auto;
     padding: ${({ size }) => (size === 'small' ? '0 20px ' : '0 20px 150px')};
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 450px) {
+      flex-direction: column;
+      img {
+        margin-bottom: 30px;
+      }
+    }
 
     nav {
       a {
